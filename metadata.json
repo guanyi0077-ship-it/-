@@ -1,0 +1,5 @@
+{
+  "name": "PR Auto-Marker Tool",
+  "description": "A professional tool to batch generate Premiere Pro timeline markers from text feedback. Paste your comments with timestamps and get an ExtendScript (.jsx) to automate the marking process.",
+  "requestFramePermissions": []
+}
