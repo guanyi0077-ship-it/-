@@ -1,20 +1,36 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# ReviewFlow Studio
 
-# Run and deploy your AI Studio app
+这是一个专业的视频审核平台，支持视频批注、黑帧检测、音频分析等功能。
 
-This contains everything you need to run your app locally.
+## 如何在本地运行
 
-View your app in AI Studio: https://ai.studio/apps/ded6aa79-a0e6-4fd9-9023-550ce91ee962
+由于浏览器安全限制（CORS 和 ES 模块），您不能直接双击 `index.html` 打开应用。请按照以下步骤操作：
 
-## Run Locally
+### 1. 安装依赖
+如果您有源代码，请先安装 Node.js，然后在终端运行：
+```bash
+npm install
+```
 
-**Prerequisites:**  Node.js
+### 2. 启动开发服务器
+```bash
+npm run dev
+```
+然后打开浏览器访问 `http://localhost:3000`。
 
+### 3. 如果您下载的是构建后的版本 (dist)
+如果您只有 `dist` 文件夹，可以使用静态服务器运行：
+```bash
+npx serve -s dist
+```
+或者使用 Python：
+```bash
+python -m http.server 8000
+```
+然后访问 `http://localhost:8000`。
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 功能亮点
+- **视频批注**: 在视频任意时间点添加文字批注并自动截屏。
+- **黑帧检测**: 自动扫描视频中的纯黑帧并标记。
+- **音频分析**: 实时 L/R 声道电平显示，并自动检测声道不平衡。
+- **导出报告**: 支持一键导出 Excel 和 Word 格式的审核报告。
